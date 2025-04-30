@@ -1,11 +1,11 @@
-const buttons = document.querySelectorAll('.btn');
+const buttons = document.querySelectorAll('btn');
 const display = document.getElementById('display');
 
 let current = "";
 
 buttons.forEach(button => {
-    btn.addEventListener('click', () => {
-        const value = btn.textContent;
+    button.addEventListener('click', () => {
+        const value = button.textContent;
 
         if (value === 'AC') {
             current = "";
@@ -15,7 +15,7 @@ buttons.forEach(button => {
             display.textContent = current || "0";
         } else if (value === "=") {
             try {
-                let replaced = current.replace(/×/g, '*').replace(/×/g, "*").replace(/÷/g, "/").replace(/−/g, "-");
+                let replaced = current.replace(/x/g, '*').replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-');
                 current = eval(replaced).toString();
                 display.textContent = current;
               } catch {
