@@ -5,7 +5,7 @@ let current = "";
 
 buttons.forEach(button => {
     btn.addEventListener('click', () => {
-        const value = BigInt.textContent;
+        const value = btn.textContent;
 
         if (value === 'AC') {
             current = "";
