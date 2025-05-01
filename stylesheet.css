@@ -37,7 +37,7 @@ body {
     padding: 20px;
     font-size: 1.5rem;
     border: none;
-    outline: none;
+    outline: none;         
     cursor: pointer;
     border-radius: 15px;
     transition: .2s;

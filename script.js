@@ -32,4 +32,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-  });  
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        handleInput(btn.textContent);
+      });
+    });
+  
+    // Klaviatura hodisasi
+    document.addEventListener('keydown', e => {
+      const k = e.key;
+      if (/\d/.test(k)) {
+        handleInput(k);
+      } else if (k === '+' || k === '-' || k === '*' || k === '/') {
+        // klaviaturadagi * va /
+        const map = {'*':'×', '/':'÷'};
+        handleInput(map[k] || k);
+      } else if (k === 'Enter') {
+        handleInput('=');
+      } else if (k === 'Backspace') {
+        handleInput('⌫');
+      } else if (k === 'Delete') {
+        handleInput('AC');
+      } else if (k === '%') {
+        handleInput('%');
+      } else if (k === '.') {
+        handleInput('.');
+      }
+    });
+  });
