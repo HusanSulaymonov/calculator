@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // Klaviatura hodisasi
+    // Keyboard event
     document.addEventListener('keydown', e => {
       const k = e.key;
       if (/\d/.test(k)) {
