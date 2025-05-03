@@ -39,8 +39,11 @@ body {
     border: none;
     outline: none;         
     cursor: pointer;
-    border-radius: 15px;
-    transition: .2s;
+    border-radius: 0.9rem;
+    transition: .2s ease-in-out;
+    display: flex;             
+    justify-content: center;      
+    align-items: center;
 }
 
 .btn:active {
